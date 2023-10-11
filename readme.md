@@ -1,7 +1,9 @@
-### dataloader
+### Minimum Data loading example
 
-This example uses [dataloaden](https://github.com/vektah/dataloaden) to avoiding n+1 queries.  
+I left a comment on resolvers.go:88
 
+Follow my comment trail!
 
-There is also [nicksrandall/dataloader](https://github.com/nicksrandall/dataloader) if you wanted to avoid 
-doing more codegeneration. 
+if you'd like to run and toy around in the gql playground run:
+
+`go run server/server.go`

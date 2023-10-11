@@ -46,8 +46,9 @@ type customerResolver struct{ *Resolver }
 //	  }
 //	}`
 //
-// However there are still problems that exist.  We are running a query for EACH customer in order to get the full data set.  We can do better.
-// Goto: dataloaders.go:
+// We can do better still!  We are running a query for EACH customer in order to get the full data set.
+// Instead, lets run a single query and populate every customers address
+// Goto: dataloaders.go:38
 func (r *customerResolver) Address(ctx context.Context, obj *Customer) (*Address, error) {
 	addressId := strconv.Itoa(obj.AddressID)
 	fmt.Printf("SELECT * FROM address WHERE id IN (%s)\n", addressId)
